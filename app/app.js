@@ -5,7 +5,7 @@ document.getElementById('btn-noakhali').addEventListener('click', function() {
 
     let addDonatedMoneyNoakhali = inputNoakhaliNumber + donatedMoneyNoakhaliNumber;
 
-    let accountMoneyNumber = getAccountMoney('account-money')
+    let accountMoneyNumber = getTextFieldValue('account-money')
 
     
     if (inputNoakhaliNumber <= accountMoneyNumber) {
@@ -27,7 +27,7 @@ document.getElementById('btn-feni').addEventListener('click', function() {
 
     let addDonatedMoneyFeni = inputFeniNumber + donatedMoneyFeniNumber;
 
-    let accountMoneyNumber = getAccountMoney('account-money')
+    let accountMoneyNumber = getTextFieldValue('account-money')
 
     
     if (inputFeniNumber <= accountMoneyNumber) {
@@ -49,7 +49,7 @@ document.getElementById('btn-quota').addEventListener('click', function() {
 
     let addDonatedMoneyQuota = inputQuotaNumber + donatedMoneyQuotaNumber;
 
-    let accountMoneyNumber = getAccountMoney('account-money')
+    let accountMoneyNumber = getTextFieldValue('account-money')
 
     
     if (inputQuotaNumber <= accountMoneyNumber) {
@@ -63,4 +63,13 @@ document.getElementById('btn-quota').addEventListener('click', function() {
         return;
     }
 });
+
+document.getElementById('btn-donation').addEventListener('click', function() {
+    getSection('donation');
+})
+
+
+document.getElementById('btn-history').addEventListener('click', function() {
+    getSection('history');
+})
 
