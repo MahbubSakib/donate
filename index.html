@@ -37,7 +37,8 @@
         <header>
             <nav class="">
                 <div class="flex justify-between w-10/12 mx-auto pt-5 pb-10">
-                    <button class="bg-primary-btn rounded-md px-8 font-semibold text-primary-text">Blog</button>
+                    <a class="bg-primary-btn rounded-md px-8 py-3 font-semibold text-primary-text" href="blog.html">Blog</a>
+                    <!-- <button class="bg-primary-btn rounded-md px-8 font-semibold text-primary-text">Blog</button> -->
                     <h2 class="flex justify-center items-center w-2/6 gap-3">
                         <img class="border-2 border-dashed" src="assets/logo.png" alt="">
                         <p class="font-semibold text-primary-text">Donate Bangladesh</p>
@@ -177,8 +178,18 @@
                 </section>
             </div>
 
-            <div id="history"  class=" ">
-                
+            <div id="history">
+            </div>
+
+            <div class="bg-primary10 fixed inset-0 hidden justify-center items-center z-50" id="modal">
+                <div class="bg-white p-10 text-center flex flex-col gap-5 justify-center items-center rounded-2xl">
+                    <h1 class="text-3xl font-bold text-black text-primary">Congrats!</h1>
+                    <img src="assets/coin.png" alt="">
+                    <p>You Have Donated For Humankind
+                    </p>
+                    <h3 class="font-semibold">Successfully</h3>
+                    <button id="close" class="py-3 px-10 bg-gray-200 text-black rounded-lg" id="Continue">close confirmation</button>
+                </div>
             </div>
         </main>
 

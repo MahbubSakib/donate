@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-bg': 'rgb(249, 247, 243)',
+                        'primary-btn': 'rgb(180, 244, 97)',
+                        'primary-text': 'rgb(17, 17, 17)',
+                        'secondary-text': 'rgba(17, 17, 17, 0.7)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .font-lexend {
+            font-family: "Lexend", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="font-lexend">
+    <header class="bg-primary-bg">
+        <div class="flex justify-between w-10/12 mx-auto pt-5 pb-10">
+            <a class="bg-primary-btn rounded-md px-8 py-3 font-semibold text-primary-text" href="index.html">Home</a>
+            <!-- <button class="bg-primary-btn rounded-md px-8 font-semibold text-primary-text">Blog</button> -->
+            <h2 class="flex justify-center items-center w-2/6 gap-3">
+                <img class="border-2 border-dashed" src="assets/logo.png" alt="">
+                <p class="font-semibold text-primary-text">Donate Bangladesh</p>
+            </h2>
+            <p class="flex items-center gap-1">
+                <img class="border-2 border-dashed" src="assets/coin.png" alt="">
+                <span id="account-money">5000</span>
+                <span>BDT</span>
+            </p>
+        </div>
+    </header>
+
+    <main class="bg-white">
+        <section class="w-10/12 mx-auto mt-10">
+            <h1 class="text-4xl font-bold">Important FAQ</h1>
+            <div class="join join-vertical w-full mt-5">
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" checked="checked" />
+                    <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                    <div class="collapse-content">
+                        <p>hello</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                    <div class="collapse-content">
+                        <p>hello</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+                    <div class="collapse-content">
+                        <p>hello</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">How do you manipulate an element's attribute and styles using the DOM?</div>
+                    <div class="collapse-content">
+                        <p>hello</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

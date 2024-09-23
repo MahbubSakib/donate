@@ -1,3 +1,5 @@
+const closeModal = document.getElementById('close');
+
 document.getElementById('btn-noakhali').addEventListener('click', function () {
     const inputNoakhaliNumber = getInputFieldValue('input-noakhali');
 
@@ -5,7 +7,12 @@ document.getElementById('btn-noakhali').addEventListener('click', function () {
 
     let addDonatedMoneyNoakhali = inputNoakhaliNumber + donatedMoneyNoakhaliNumber;
 
-    let accountMoneyNumber = getTextFieldValue('account-money')
+    let accountMoneyNumber = getTextFieldValue('account-money');
+
+    if (isNaN(inputNoakhaliNumber)) {
+        alert('Please insert a number.');
+        return;
+    }
 
 
     if (inputNoakhaliNumber <= accountMoneyNumber) {
@@ -25,6 +32,14 @@ document.getElementById('btn-noakhali').addEventListener('click', function () {
         `;
 
         document.getElementById('history').appendChild(div);
+
+        // modal
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+
+        closeModal.addEventListener('click', function() {
+            modal.classList.add("hidden");
+        });
     } else {
         alert('You do not have sufficient balance');
         document.getElementById('input-noakhali').value = '';
@@ -39,8 +54,12 @@ document.getElementById('btn-feni').addEventListener('click', function () {
 
     let addDonatedMoneyFeni = inputFeniNumber + donatedMoneyFeniNumber;
 
-    let accountMoneyNumber = getTextFieldValue('account-money')
+    let accountMoneyNumber = getTextFieldValue('account-money');
 
+    if (isNaN(inputFeniNumber)) {
+        alert('Please insert a number.');
+        return;
+    }
 
     if (inputFeniNumber <= accountMoneyNumber) {
         const updatedAccountMoney = accountMoneyNumber - inputFeniNumber;
@@ -59,6 +78,14 @@ document.getElementById('btn-feni').addEventListener('click', function () {
         `;
 
         document.getElementById('history').appendChild(div);
+
+        // modal
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+
+        closeModal.addEventListener('click', function() {
+            modal.classList.add("hidden");
+        });
     } else {
         alert('You do not have sufficient balance');
         document.getElementById('input-feni').value = '';
@@ -73,8 +100,13 @@ document.getElementById('btn-quota').addEventListener('click', function () {
 
     let addDonatedMoneyQuota = inputQuotaNumber + donatedMoneyQuotaNumber;
 
-    let accountMoneyNumber = getTextFieldValue('account-money')
+    let accountMoneyNumber = getTextFieldValue('account-money');
 
+    if (isNaN(inputQuotaNumber)) {
+        alert('Please insert a number.');
+        inputQuotaNumber = '';
+        return;
+    }
 
     if (inputQuotaNumber <= accountMoneyNumber) {
         const updatedAccountMoney = accountMoneyNumber - inputQuotaNumber;
@@ -93,6 +125,14 @@ document.getElementById('btn-quota').addEventListener('click', function () {
         `;
 
         document.getElementById('history').appendChild(div);
+
+        // modal
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+
+        closeModal.addEventListener('click', function() {
+            modal.classList.add("hidden");
+        });
     } else {
         alert('You do not have sufficient balance');
         document.getElementById('input-quota').value = '';
