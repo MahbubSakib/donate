@@ -20,7 +20,7 @@ btnDonation.addEventListener('click', function() {
 window.addEventListener('scroll', function () {
     const header = document.getElementById('header');
     
-    if (window.scrollY > 50) {
+    if (window.scrollY > 10) {
         header.classList.add('bg-opacity-75', 'backdrop-blur-md');
     } else {
         header.classList.remove('bg-opacity-75', 'backdrop-blur-md');
