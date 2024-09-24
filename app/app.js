@@ -21,9 +21,9 @@ window.addEventListener('scroll', function () {
     const header = document.getElementById('header');
     
     if (window.scrollY > 10) {
-        header.classList.add('bg-opacity-75', 'backdrop-blur-md');
+        header.classList.add('bg-opacity-60', 'backdrop-blur-md');
     } else {
-        header.classList.remove('bg-opacity-75', 'backdrop-blur-md');
+        header.classList.remove('bg-opacity-60', 'backdrop-blur-md');
     }
 });
 
