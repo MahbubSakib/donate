@@ -1,3 +1,32 @@
+const btnDonation = document.getElementById('btn-donation');
+const btnHistory = document.getElementById('btn-history');
+
+btnHistory.addEventListener('click', function() {
+    btnHistory.classList.add('bg-primary-btn', 'text-primary-text');
+    btnHistory.classList.remove('text-secondary-text', 'border', 'border-gray-300', 'bg-white');
+    
+    btnDonation.classList.remove('bg-primary-btn', 'text-primary-text');
+    btnDonation.classList.add('border', 'border-solid', 'border-gray-300', 'text-secondary-text', 'bg-white');
+});
+
+btnDonation.addEventListener('click', function() {
+    btnDonation.classList.add('bg-primary-btn', 'text-primary-text');
+    btnDonation.classList.remove('text-secondary-text', 'border', 'border-gray-300', 'bg-white');
+    
+    btnHistory.classList.remove('bg-primary-btn', 'text-primary-text');
+    btnHistory.classList.add('border', 'border-solid', 'border-gray-300', 'text-secondary-text', 'bg-white');
+});
+
+window.addEventListener('scroll', function () {
+    const header = document.getElementById('header');
+    
+    if (window.scrollY > 50) {
+        header.classList.add('bg-opacity-75', 'backdrop-blur-md');
+    } else {
+        header.classList.remove('bg-opacity-75', 'backdrop-blur-md');
+    }
+});
+
 const closeModal = document.getElementById('close');
 
 document.getElementById('btn-noakhali').addEventListener('click', function () {
